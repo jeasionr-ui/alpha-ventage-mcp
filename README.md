@@ -50,7 +50,7 @@ Configure the server in your MCP settings file:
   "mcpServers": {
     "alpha-vantage": {
       "command": "node",
-      "args": ["https://github.com/jeasionr-ui/alpha-ventage-mcp/blob/main/build/index.js"],
+      "args": ["/path/to/alpha-ventage-mcp/build/index.js"],
       "env": {
         "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
       },
@@ -60,6 +60,8 @@ Configure the server in your MCP settings file:
   }
 }
 ```
+
+**注意**: 请将 `/path/to/alpha-ventage-mcp/build/index.js` 替换为您本地项目的实际路径。MCP 服务器需要在本地运行，不能直接使用 GitHub URL。
 
 ## 🔑 API Key
 
