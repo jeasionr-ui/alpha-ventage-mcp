@@ -1,5 +1,7 @@
 # Alpha Vantage MCP Server 📈
 
+English | [中文](README.zh.md)
+
 A Model Context Protocol (MCP) server that provides seamless integration with Alpha Vantage's financial data API, enabling real-time stock market data, cryptocurrency prices, forex rates, and technical indicators.
 
 ## 🌟 Features
