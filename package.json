@@ -1,6 +1,6 @@
 {
   "name": "alpha-ventage-mcp",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "A Model Context Protocol (MCP) server for Alpha Vantage financial data API",
   "author": "jeasionr-ui",
   "license": "MIT",
@@ -11,20 +11,19 @@
   "keywords": ["mcp", "alpha-vantage", "financial", "stock", "crypto", "forex"],
   "type": "module",
   "bin": {
-    "alpha-ventage-mcp": "./build/index.js"
+    "alpha-ventage-mcp": "./bin/alpha-ventage-mcp"
   },
   "files": [
-    "build"
+    "src",
+    "bin"
   ],
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "prepare": "npm run build",
-    "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector src/index.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
-    "axios": "^1.8.4"
+    "axios": "^1.8.4",
+    "tsx": "^4.7.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
