@@ -1,8 +1,14 @@
 {
   "name": "alpha-ventage-mcp",
   "version": "0.1.0",
-  "description": "A MCP server for alpha ventage",
-  "private": true,
+  "description": "A Model Context Protocol (MCP) server for Alpha Vantage financial data API",
+  "author": "jeasionr-ui",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeasionr-ui/alpha-ventage-mcp.git"
+  },
+  "keywords": ["mcp", "alpha-vantage", "financial", "stock", "crypto", "forex"],
   "type": "module",
   "bin": {
     "alpha-ventage-mcp": "./build/index.js"
