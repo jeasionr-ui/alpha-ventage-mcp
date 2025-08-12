@@ -23,15 +23,13 @@
 
 ### 安装
 
-#### 方式一：使用 npx（推荐）
-无需安装！包会自动下载并运行。
+无需安装！使用 npx 时包会自动下载并运行。
 
-#### 方式二：本地开发
+本地开发：
 ```bash
 git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
 cd alpha-ventage-mcp
 npm install
-npm run build
 ```
 
 ## ⚙️ 配置
@@ -40,39 +38,12 @@ npm run build
 
 在您的 MCP 设置文件中配置服务器：
 
-#### 方式一：使用 npx（推荐）
 ```json
 {
   "mcpServers": {
     "alpha-vantage": {
       "command": "npx",
       "args": ["alpha-ventage-mcp"],
-      "env": {
-        "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
-      },
-      "disabled": false,
-      "alwaysAllow": []
-    }
-  }
-}
-```
-
-#### 方式二：本地安装
-```bash
-# 克隆并本地构建
-git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
-cd alpha-ventage-mcp
-npm install
-npm run build
-```
-
-然后使用本地路径配置：
-```json
-{
-  "mcpServers": {
-    "alpha-vantage": {
-      "command": "node",
-      "args": ["/path/to/alpha-ventage-mcp/build/index.js"],
       "env": {
         "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
       },

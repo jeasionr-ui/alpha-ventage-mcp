@@ -23,15 +23,13 @@ A Model Context Protocol (MCP) server that provides access to Alpha Vantage fina
 
 ### Installation
 
-#### Option 1: Using npx (Recommended)
-No installation required! The package will be downloaded and run automatically.
+No installation required! The package will be downloaded and run automatically using npx.
 
-#### Option 2: Local Development
+For local development:
 ```bash
 git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
 cd alpha-ventage-mcp
 npm install
-npm run build
 ```
 
 ## ⚙️ Configuration
@@ -40,39 +38,12 @@ npm run build
 
 Configure the server in your MCP settings file:
 
-#### Option 1: Using npx (Recommended)
 ```json
 {
   "mcpServers": {
     "alpha-vantage": {
       "command": "npx",
       "args": ["alpha-ventage-mcp"],
-      "env": {
-        "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
-      },
-      "disabled": false,
-      "alwaysAllow": []
-    }
-  }
-}
-```
-
-#### Option 2: Local Installation
-```bash
-# Clone and build locally
-git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
-cd alpha-ventage-mcp
-npm install
-npm run build
-```
-
-Then configure with local path:
-```json
-{
-  "mcpServers": {
-    "alpha-vantage": {
-      "command": "node",
-      "args": ["/path/to/alpha-ventage-mcp/build/index.js"],
       "env": {
         "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
       },
