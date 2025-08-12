@@ -25,59 +25,25 @@ npx -y @smithery/cli install @deepsuthar496/alpha-ventage-mcp --client claude
 
 ### Manual Installation
 
-1. Clone the repository:
+No installation required! The package will be downloaded and run automatically using npx.
+
+For local development:
 ```bash
-git clone https://github.com/jeasionr-ui/alpha-ventage-mcp
+git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
 cd alpha-ventage-mcp
-```
-
-2. Install dependencies:
-```bash
 npm install
-```
-
-3. Build the server:
-```bash
-npm run build
 ```
 
 ### Configuration
 
 Configure the server in your MCP settings file:
 
-#### Option 1: Using npx (Recommended)
 ```json
 {
   "mcpServers": {
     "alpha-vantage": {
       "command": "npx",
       "args": ["alpha-ventage-mcp"],
-      "env": {
-        "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
-      },
-      "disabled": false,
-      "alwaysAllow": []
-    }
-  }
-}
-```
-
-#### Option 2: Local Installation
-```bash
-# Clone and build locally
-git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
-cd alpha-ventage-mcp
-npm install
-npm run build
-```
-
-Then configure with local path:
-```json
-{
-  "mcpServers": {
-    "alpha-vantage": {
-      "command": "node",
-      "args": ["/path/to/alpha-ventage-mcp/build/index.js"],
       "env": {
         "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
       },

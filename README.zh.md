@@ -15,69 +15,25 @@
 
 ### 安装
 
-#### 通过 Smithery 安装
+无需安装！使用 npx 时包会自动下载并运行。
 
-通过 [Smithery](https://smithery.ai/server/@deepsuthar496/alpha-ventage-mcp) 自动为 Claude Desktop 安装 Alpha Vantage 金融数据服务器：
-
+本地开发：
 ```bash
-npx -y @smithery/cli install @deepsuthar496/alpha-ventage-mcp --client claude
-```
-
-### 手动安装
-
-1. 克隆仓库：
-```bash
-git clone https://github.com/jeasionr-ui/alpha-ventage-mcp
+git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
 cd alpha-ventage-mcp
-```
-
-2. 安装依赖：
-```bash
 npm install
-```
-
-3. 构建服务器：
-```bash
-npm run build
 ```
 
 ### 配置
 
 在您的 MCP 设置文件中配置服务器：
 
-#### 方式一：使用 npx（推荐）
 ```json
 {
   "mcpServers": {
     "alpha-vantage": {
       "command": "npx",
       "args": ["alpha-ventage-mcp"],
-      "env": {
-        "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
-      },
-      "disabled": false,
-      "alwaysAllow": []
-    }
-  }
-}
-```
-
-#### 方式二：本地安装
-```bash
-# 克隆并本地构建
-git clone https://github.com/jeasionr-ui/alpha-ventage-mcp.git
-cd alpha-ventage-mcp
-npm install
-npm run build
-```
-
-然后使用本地路径配置：
-```json
-{
-  "mcpServers": {
-    "alpha-vantage": {
-      "command": "node",
-      "args": ["/path/to/alpha-ventage-mcp/build/index.js"],
       "env": {
         "ALPHA_VANTAGE_API_KEY": "your-api-key-here"
       },
